@@ -1,4 +1,5 @@
 
 {
-    "tokenPrivedKey": "token_key"
+    "tokenPrivedKey": "token_key",
+    "server": "server"
 }
