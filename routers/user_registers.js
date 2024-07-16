@@ -29,4 +29,11 @@ router.post('/new' , async (req , res) => {
 })
 
 
+router.get('/all' , async (req , res) => {
+    const allUser = await UserRegister.find()
+
+    res.json({massage: 'Barcha foidalanuvchilar' , data: allUser})
+})
+
+
 module.exports = router
