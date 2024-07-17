@@ -31,9 +31,17 @@ router.post('/new' , async (req , res) => {
 
 router.get('/all' , async (req , res) => {
     const allUser = await UserRegister.find()
-
     res.json({massage: 'Barcha foidalanuvchilar' , data: allUser})
 })
+
+router.post('/delete/:id', async (req , res) => {
+    const result = await UserRegister.deleteOne({_id: req.params.id})
+
+    res.json({
+        status: true,
+        data: result
+    })
+} )
 
 
 module.exports = router
