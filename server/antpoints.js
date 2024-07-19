@@ -6,4 +6,5 @@ module.exports = function (app) {
     app.use(express.json())
     app.use('/api/user'  , require('../routers/user_registers'))
     app.use('/api/user'  , require('../routers/auth'))
+    app.use('/api/add-product'  , require('../routers/add_producta'))
 }

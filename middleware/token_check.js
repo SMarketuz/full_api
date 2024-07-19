@@ -14,8 +14,7 @@ const auth = async (req , res , next) => {
         const decoded = jwt.verify(token ,config.get('tokenPrivedKey'))
         const user = await UserRegister.findById(decoded.user)
         req.user = user
-        next() 
-
+        next()
     }catch(err) {
         return res.status(400).json({
             status: false,

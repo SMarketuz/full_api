@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 
-
 const userRsgisterSchema = new mongoose.Schema({
     name: {
         type: String,
