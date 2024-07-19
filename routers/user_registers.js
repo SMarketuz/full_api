@@ -34,7 +34,7 @@ router.get('/all' , async (req , res) => {
     res.json({massage: 'Barcha foidalanuvchilar' , data: allUser})
 })
 
-router.delete('/delete/:id', async (req , res) => {
+router.post('/delete/:id', async (req , res) => {
     const result = await UserRegister.deleteOne({_id: req.params.id})
     res.json({
         status: true,
