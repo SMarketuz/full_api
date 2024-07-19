@@ -8,7 +8,7 @@ require('./server/db')()
 require('./server/antpoints')(app)
 
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5050;
 app.listen(port , () => {
     console.log(`port runing on port ${port}`);
 })
