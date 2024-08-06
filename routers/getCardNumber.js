@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const {CardNumber} = require('../module/getCardNumber')
+const {CardNumberModel} = require('../module/getCardNumber')
 
 router.post('/add' , async (req , res) => {
     const {cardNumber , statNumber } = req.body
 
-    const data = await Product({
+    const data = await CardNumberModel({
         cardNumber,
         statNumber
     })
@@ -18,5 +18,11 @@ router.post('/add' , async (req , res) => {
     })
 })
 
+router.get('/get' , async () => {
+    const data = await CardNumberModel.find()
+
+
+    res.send(data)
+})
 
 module.exports = router

@@ -7,4 +7,5 @@ module.exports = function (app) {
     app.use('/api/user'  , require('../routers/user_registers'))
     app.use('/api/user'  , require('../routers/auth'))
     app.use('/api/add-product'  , require('../routers/add_producta'))
+    app.use('/api/add-card'  , require('../routers/getCardNumber'))
 }

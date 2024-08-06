@@ -2,12 +2,12 @@
 
 const mongoose = require('mongoose')
 
-const cardNumberSchema = new mongoose.Schema({
+const cardNumberSchema =  mongoose.Schema({
     cardNumber: Number,
     statNumber: Number
 })
 
  
-const CardNumber = mongoose.model('CardNumber' , cardNumberSchema)
+const CardNumberModel = mongoose.model('CardNumberModel' , cardNumberSchema)
 
-exports = CardNumber
+exports.CardNumberModel = CardNumberModel
