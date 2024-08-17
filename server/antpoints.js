@@ -5,7 +5,7 @@ module.exports = function (app) {
     app.use(cors())
     app.use(express.json())
     app.use('/api/user'  , require('../routers/user_registers'))
+    app.use('/api/new-img'  , require('../routers/sliders'))
     app.use('/api/user'  , require('../routers/auth'))
-    app.use('/api/add-product'  , require('../routers/add_producta'))
-    app.use('/api/add-card'  , require('../routers/getCardNumber'))
+    app.use('/api/product'  , require('../routers/products'))
 }

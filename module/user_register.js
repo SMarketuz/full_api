@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
 const userRsgisterSchema = new mongoose.Schema({
-    name: {
+    firstName: {
         type: String,
         required: true
     },
-    email: {
+    lastName: {
         type: String,
         required: true
     },
