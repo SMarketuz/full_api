@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const {UserRegister} = require('../module/user_register')
 const bcrypt = require('bcrypt')
+const auth = require('../middleware/token_check')
 
 router.post('/new' , async (req , res) => {
     const {firstName , lastName , username, password} = req.body
@@ -26,6 +27,13 @@ router.post('/new' , async (req , res) => {
         massage: "Foidalanuvchi ro'yxatdan o'tdi"
     })
 
+})
+
+
+router.get('/get-one' ,auth , async (req , res) => {
+    const data = await UserRegister.findById({_id: req.user._id})
+
+    res.send(data)
 })
 
 
